@@ -1,5 +1,6 @@
-#NOte
+# Note
 ## It only run when react strict mode is turned off.
+
 
 
 
