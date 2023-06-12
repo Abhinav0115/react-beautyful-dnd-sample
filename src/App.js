@@ -1,44 +1,39 @@
 import React from "react";
-import ReactBeauty from "./components/reactBeauty.js";
-import ReactOther from "./components/reactOther.js";
+import SingleDrop from "./single-drag-drop/react-single.js";
+import ReactInput from "./drag-drop-with-input/react-with-input.js";
+import MultiDrag from "./multiple-drag-drop/multi-drag.js";
+import MultiDragWithInput from "./multiple-drag-drop-with-input/multi-drag-with-input.js";
 
 const App = () => {
     return (
         <div>
-            {<ReactBeauty />}
-            <ReactOther />
+            <div className="mb-5 mt-4">
+                <h2 className="text-center mb-4">Single drag and drop box</h2>
+                <SingleDrop />
+            </div>
+
+            <div className="mb-5">
+                <hr />
+                <h2 className="text-center mb-4">Multiple drag and drop box</h2>
+
+                <MultiDrag />
+            </div>
+            <div className="mb-5">
+                <hr />
+                <h2 className="text-center mb-4">
+                    Single drag and drop with input box
+                </h2>
+                <ReactInput />
+            </div>
+            <div className="mb-5">
+                <hr />
+                <h2 className="text-center mb-4">
+                    Multiple drag and drop with input box
+                </h2>
+                <MultiDragWithInput />
+            </div>
         </div>
     );
 };
 
 export default App;
-
-// import { useState } from "react";
-// import { Button } from "./Button.js";
-// import { ListComponent } from "./ListComponent.js";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-// function App() {
-//     const [components, setComponents] = useState([{ employment: "" }]);
-
-//     function addComponent() {
-//         setComponents([...components, { employment: "" }]);
-//     }
-//     const deleteComponent = (i) => {
-//         const list = [...components];
-//         list.splice(i, 1);
-//         setComponents(list);
-//     };
-
-//     return (
-//         <div>
-//             <Button onClick={addComponent} text="Call Component" />
-//             <Button onClick={deleteComponent} text="delete components" />
-//             {components.map((item, i) => (
-//                 <ListComponent text={item} />
-//             ))}
-//         </div>
-//     );
-// }
-
-// export default App;
